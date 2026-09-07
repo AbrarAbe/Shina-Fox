@@ -1,13 +1,20 @@
 @charset "UTF-8";
+
+/**use the line below only when using floorp css live reload - read ARCHITECHTURE.md for more information **/
+/*@-moz-document url(chrome://browser/content/browser.xhtml) {*/
 :root {
-  --firefoxcss-top-bar-border-bottom-size: 0px;
-  --firefoxcss-top-bar-border-bottom-color: transparent;
-  --firefoxcss-item-bg-color: rgba(255,255,255,0.08);
-  --firefoxcss-urlbar-zoom-button: rgba(255,255,255,0.15);
-  --toolbox-background-color: #282927;
+    --firefoxcss-top-bar-border-bottom-size: 0px;
+    --firefoxcss-top-bar-border-bottom-color: transparent;
+    --firefoxcss-item-bg-color: rgba(255, 255, 255, 0.08);
+    --firefoxcss-urlbar-zoom-button: rgba(255, 255, 255, 0.15);
+    --toolbox-background-color: #282927;
 }
+
 @media (prefers-color-scheme: light) {
-  :root { --toolbox-background-color:#636363; --toolbar-background-color:#636363; }
+    :root {
+        --toolbox-background-color: #636363;
+        --toolbar-background-color: #636363;
+    }
 }
 
 /* Background Color */
@@ -123,6 +130,7 @@
     box-shadow: none !important;
     outline: none !important;
 }
+
 #nav-bar {
     border: none !important;
     border-left: none !important;
@@ -131,6 +139,7 @@
     box-shadow: none !important;
     outline: none !important;
 }
+
 #TabsToolbar,
 #titlebar,
 toolbar,
@@ -611,7 +620,7 @@ tab,
 }
 
 #workspaces-toolbar-button {
-		display: none;
+    display: none;
 }
 
 /*============================================================================================*/
@@ -628,7 +637,7 @@ tab,
 
 #urlbar-container {
     flex: 1;
-		--urlbar-container-height: 5vh !important;
+    --urlbar-container-height: 5vh !important;
     max-width: auto;
     min-width: 40px !important;
     margin: 0 0px !important;
@@ -649,32 +658,34 @@ tab,
     margin-top: 0 !important;
     margin-left: 0px !important;
     margin-right: 0px !important;
-    border: 2px solid rgba(40,41,39,0.0) !important;
+    border: 2px solid rgba(40, 41, 39, 0.0) !important;
     border-radius: 5px;
-		transition: width 0.3s ease, border 0.3s ease, left 0.3s ease, margin-top 0.3s ease, margin-left 0.3s ease, margin-right 0.3s ease;
+    transition: width 0.3s ease, border 0.3s ease, left 0.3s ease, margin-top 0.3s ease, margin-left 0.3s ease, margin-right 0.3s ease;
 }
 
 #main-window #urlbar:hover {
     width: 50% !important;
-    border: 2px solid rgba(118,130,118,0.8) !important;
+    border: 2px solid rgba(118, 130, 118, 0.8) !important;
     transition: width 0.3s ease, border 0.3s ease !important;
 }
+
 #main-window #urlbar[focused],
 #urlbar[focused],
 moz-urlbar#urlbar[focused],
 #main-window #urlbar:focus,
 #urlbar:focus {
-    border: 2px solid rgba(118,130,118,0.8) !important;
-    border-color: rgba(118,130,118,0.8) !important;
-    --toolbar-field-border-color: rgba(118,130,118,0.8) !important;
-    --toolbar-field-focus-border-color: rgba(118,130,118,0.8) !important;
-    --focus-outline-color: rgba(118,130,118,0.8) !important;
+    border: 2px solid rgba(118, 130, 118, 0.8) !important;
+    border-color: rgba(118, 130, 118, 0.8) !important;
+    --toolbar-field-border-color: rgba(118, 130, 118, 0.8) !important;
+    --toolbar-field-focus-border-color: rgba(118, 130, 118, 0.8) !important;
+    --focus-outline-color: rgba(118, 130, 118, 0.8) !important;
     --toolbar-field-focus-background-color: transparent !important;
     outline: none !important;
-    outline-color: rgba(118,130,118,0.8) !important;
+    outline-color: rgba(118, 130, 118, 0.8) !important;
     outline-offset: 0 !important;
     box-shadow: none !important;
 }
+
 #urlbar[focused] .urlbar-background,
 #urlbar[focused] .urlbar-input-container,
 moz-urlbar#urlbar[focused] .urlbar-background,
@@ -686,11 +697,12 @@ moz-urlbar#urlbar[focused] .urlbar-input-container,
     outline: none !important;
     box-shadow: none !important;
 }
+
 /* Override Floorp's teal #329ca0 focus variables at root */
 :root {
-    --focus-outline-color: rgba(118,130,118,0.8) !important;
-    --toolbar-field-focus-border-color: rgba(118,130,118,0.8) !important;
-    --toolbar-field-border-color: rgba(130,130,130,0.8) !important;
+    --focus-outline-color: rgba(118, 130, 118, 0.8) !important;
+    --toolbar-field-focus-border-color: rgba(118, 130, 118, 0.8) !important;
+    --toolbar-field-border-color: rgba(130, 130, 130, 0.8) !important;
 }
 
 #main-window #urlbar[breakout][breakout-extend] {
@@ -705,31 +717,37 @@ moz-urlbar#urlbar[focused] .urlbar-input-container,
     /*margin-top: 25vh !important;*/
     border-radius: 5px !important;
     background-color: var(--toolbar-background-color, #282927) !important;
-    border: 2px solid rgba(118,130,118,0.8) !important;
+    border: 2px solid rgba(118, 130, 118, 0.8) !important;
     transition: width 0.3s ease, border 0.3s ease, left 0.3s ease, margin-top 0.3s ease, margin-left 0.3s ease, margin-right 0.3s ease;
 }
+
 moz-urlbar#urlbar[breakout][breakout-extend]:popover-open {
-  z-index: 9999 !important;
-  width: min(90vw, 800px) !important;
-  left: 50% !important;
-  right: auto !important;
-  transform: translateX(-50%) !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  border-radius: 5px !important;
-  background-color: var(--toolbar-background-color, #282927) !important;
-  border: 2px solid rgba(118,130,118,0.8) !important;
+    z-index: 9999 !important;
+    width: min(90vw, 800px) !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-radius: 5px !important;
+    background-color: var(--toolbar-background-color, #282927) !important;
+    border: 2px solid rgba(118, 130, 118, 0.8) !important;
 }
+
 #urlbar:has(.searchmode-switcher-panel-list[open]),
 #urlbar:has(.searchmode-switcher[open]) {
-  position: fixed !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  width: min(90vw, 800px) !important;
+    position: fixed !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: min(90vw, 800px) !important;
 }
+
 /* browser.urlbar.scotchBonnet.enableOverride=false is manual fallback if popover not supported */
 
-.urlbar-background /* was #urlbar-background */,
+.urlbar-background
+
+/* was #urlbar-background */
+,
 .urlbar-input-container {
     --toolbarbutton-border-radius: 5px !important;
 }
@@ -751,6 +769,7 @@ moz-urlbar#urlbar:not([breakout-extend]) .urlbar-background {
     border: none !important;
     box-shadow: none !important;
 }
+
 #urlbar[breakout][breakout-extend] .urlbar-background,
 #urlbar[breakout][breakout-extend] .urlbar-input-container,
 moz-urlbar#urlbar[breakout][breakout-extend] .urlbar-background,
@@ -761,6 +780,7 @@ moz-urlbar#urlbar[breakout][breakout-extend]:popover-open .urlbar-background {
     border: none !important;
     box-shadow: none !important;
 }
+
 #urlbar .urlbar-background,
 #urlbar .urlbar-input-container {
     border-radius: 5px !important;
@@ -954,11 +974,11 @@ moz-urlbar#urlbar[breakout][breakout-extend]:popover-open .urlbar-background {
 #identity-box[pageproxystate="valid"].chromeUI>.identity-box-button,
 #urlbar-label-box,
 #urlbar-zoom-button {
-    background-color: var(--firefoxcss-item-bg-color, rgba(255,255,255,0.08)) !important;
+    background-color: var(--firefoxcss-item-bg-color, rgba(255, 255, 255, 0.08)) !important;
 }
 
 #urlbar-zoom-button:hover {
-    background-color: var(--firefoxcss-urlbar-zoom-button, rgba(255,255,255,0.15)) !important;
+    background-color: var(--firefoxcss-urlbar-zoom-button, rgba(255, 255, 255, 0.15)) !important;
 }
 
 .urlbar-input-container #identity-box>.identity-box-button,
@@ -1109,7 +1129,7 @@ moz-urlbar#urlbar[breakout][breakout-extend]:popover-open .urlbar-background {
         border-radius: 5px !important;
         margin: 10px 0px 9px 10px !important;
         /*border: 2px solid rgba(204, 204, 204, 0.3);*/
-        border: 2px solid rgba(130,130,130,0.8) !important;
+        border: 2px solid rgba(130, 130, 130, 0.8) !important;
         transition: border 0.3s ease;
         box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
     }
@@ -1117,7 +1137,7 @@ moz-urlbar#urlbar[breakout][breakout-extend]:popover-open .urlbar-background {
     #sidebar-box #sidebar:hover,
     #sidebar-box #webextpanels-window:hover {
         /*border: 2px solid rgba(204, 204, 204, 0.6);*/
-        border: 2px solid rgba(118,130,118,0.8) !important;
+        border: 2px solid rgba(118, 130, 118, 0.8) !important;
         box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
     }
 }
@@ -1129,7 +1149,7 @@ moz-urlbar#urlbar[breakout][breakout-extend]:popover-open .urlbar-background {
         border-radius: 5px !important;
         margin: 10px 0px 9px 10px !important;
         /*border: 2px solid rgba(51, 51, 51, 0.1);*/
-        border: 2px solid rgba(130,130,130,0.8) !important;
+        border: 2px solid rgba(130, 130, 130, 0.8) !important;
         transition: border 0.3s ease;
         box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.5);
     }
@@ -1137,7 +1157,7 @@ moz-urlbar#urlbar[breakout][breakout-extend]:popover-open .urlbar-background {
     #sidebar-box #sidebar:hover,
     #sidebar-box #webextpanels-window:hover {
         /*border: 2px solid rgba(51, 51, 51, 0.6);*/
-        border: 2px solid rgba(118,130,118,0.8) !important;
+        border: 2px solid rgba(118, 130, 118, 0.8) !important;
         box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.5);
     }
 }
@@ -1190,14 +1210,14 @@ moz-urlbar#urlbar[breakout][breakout-extend]:popover-open .urlbar-background {
         border-radius: 5px !important;
         margin: 2.5px 15px 10px -5px !important;
         /*border: 2px solid rgba(0, 0, 0, 0);*/
-        border: 2px solid rgba(130,130,130,0.8) !important;
+        border: 2px solid rgba(130, 130, 130, 0.8) !important;
         transition: border 0.3s ease;
         box-shadow: 0px 0 5px 2px rgba(0, 0, 0, 0.5);
     }
 
     #panel-sidebar-box .sidebar-panel-browser:hover {
         /*border: 2px solid rgba(204, 204, 204, 0.6);*/
-        border: 2px solid rgba(118,130,118,0.8) !important;
+        border: 2px solid rgba(118, 130, 118, 0.8) !important;
         box-shadow: 0px 0 5px 2px rgba(0, 0, 0, 0.2);
     }
 }
@@ -1207,14 +1227,14 @@ moz-urlbar#urlbar[breakout][breakout-extend]:popover-open .urlbar-background {
         border-radius: 5px !important;
         margin: 2.5px 15px 10px -5px !important;
         /*border: 2px solid rgba(51, 51, 51, 0.1);*/
-        border: 2px solid rgba(130,130,130,0.8) !important;
+        border: 2px solid rgba(130, 130, 130, 0.8) !important;
         transition: border 0.3s ease;
         box-shadow: 0px 0 5px 2px rgba(255, 255, 255, 0.5);
     }
 
     #panel-sidebar-box .sidebar-panel-browser:hover {
         /*border: 2px solid rgba(51, 51, 51, 0.6);*/
-        border: 2px solid rgba(118,130,118,0.8) !important;
+        border: 2px solid rgba(118, 130, 118, 0.8) !important;
         box-shadow: 0px 0 5px 2px rgba(255, 255, 255, 0.2);
     }
 }
@@ -1224,7 +1244,7 @@ moz-urlbar#urlbar[breakout][breakout-extend]:popover-open .urlbar-background {
 
 #panel-sidebar-select-box {
     align-items: center !important;
-    background-color: var(--toolbox-background-color,#282927) !important;
+    background-color: var(--toolbox-background-color, #282927) !important;
 }
 
 .sidepanel-icon {
@@ -1239,14 +1259,14 @@ moz-urlbar#urlbar[breakout][breakout-extend]:popover-open .urlbar-background {
         border-radius: 5px !important;
         margin: 10px 10px 10px 0px !important;
         /*border: 2px solid rgba(204, 204, 204, 0.3) !important;*/
-        border: 2px solid rgba(130,130,130,0.8) !important;
+        border: 2px solid rgba(130, 130, 130, 0.8) !important;
         transition: border 0.3s ease;
         box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
     }
 
     #panel-sidebar-select-box:hover {
         /*border: 2px solid rgba(204, 204, 204, 0.6) !important;*/
-        border: 2px solid rgba(118,130,118,0.8) !important;
+        border: 2px solid rgba(118, 130, 118, 0.8) !important;
         box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
     }
 }
@@ -1256,14 +1276,14 @@ moz-urlbar#urlbar[breakout][breakout-extend]:popover-open .urlbar-background {
         border-radius: 5px !important;
         margin: 10px 10px 10px 0px !important;
         /*border: 2px solid rgba(51, 51, 51, 0.1) !important;*/
-        border: 2px solid rgba(130,130,130,0.8) !important;
+        border: 2px solid rgba(130, 130, 130, 0.8) !important;
         transition: border 0.3s ease;
         box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.5);
     }
 
     #panel-sidebar-select-box:hover {
         /*border: 2px solid rgba(51, 51, 51, 0.6) !important;*/
-        border: 2px solid rgba(118,130,118,0.8) !important;
+        border: 2px solid rgba(118, 130, 118, 0.8) !important;
         box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.5);
     }
 }
@@ -1289,13 +1309,13 @@ moz-urlbar#urlbar[breakout][breakout-extend]:popover-open .urlbar-background {
         margin: 10px 10px 10px 10px !important;
         transition: border 0.3s ease;
         /*border: 2px solid rgba(204, 204, 204, 0.3);*/
-        border: 2px solid rgba(130,130,130,0.8) !important;
+        border: 2px solid rgba(130, 130, 130, 0.8) !important;
         box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
     }
 
     .browserContainer:hover {
         /*border: 2px solid rgba(204, 204, 204, 0.6);*/
-        border: 2px solid rgba(118,130,118,0.8) !important;
+        border: 2px solid rgba(118, 130, 118, 0.8) !important;
         box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
     }
 }
@@ -1306,13 +1326,13 @@ moz-urlbar#urlbar[breakout][breakout-extend]:popover-open .urlbar-background {
         margin: 10px 10px 10px 10px !important;
         transition: border 0.3s ease;
         /*border: 2px solid rgba(51, 51, 51, 0.6);*/
-        border: 2px solid rgba(130,130,130,0.8) !important;
+        border: 2px solid rgba(130, 130, 130, 0.8) !important;
         box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
     }
 
     .browserContainer:hover {
         /*border: 2px solid rgba(51, 51, 51, 0.6);*/
-        border: 2px solid rgba(118,130,118,0.8) !important;
+        border: 2px solid rgba(118, 130, 118, 0.8) !important;
         box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.6);
     }
 
@@ -1321,7 +1341,13 @@ moz-urlbar#urlbar[breakout][breakout-extend]:popover-open .urlbar-background {
 :root[inFullscreen] .browserContainer,
 :root[inDOMFullscreen] .browserContainer,
 :root[inFullscreen] .browserStack,
-:root[inDOMFullscreen] .browserStack { border:none !important; margin:0 !important; border-radius:0 !important; box-shadow:none !important; overflow:visible !important; }
+:root[inDOMFullscreen] .browserStack {
+    border: none !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+}
 
 /*============================================================================================*/
 /* FIND BAR */
@@ -1333,12 +1359,12 @@ moz-urlbar#urlbar[breakout][breakout-extend]:popover-open .urlbar-background {
         border-radius: 5px !important;
         margin: 0px 10px 10px 10px !important;
         transition: border 0.3s ease !important;
-        border: 2px solid rgba(130,130,130,0.8) !important;
+        border: 2px solid rgba(130, 130, 130, 0.8) !important;
         box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
     }
 
     .browserContainer>findbar:hover {
-        border: 2px solid rgba(214,214,214,0.8) !important;
+        border: 2px solid rgba(214, 214, 214, 0.8) !important;
         box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
     }
 }
@@ -1348,12 +1374,12 @@ moz-urlbar#urlbar[breakout][breakout-extend]:popover-open .urlbar-background {
         border-radius: 5px !important;
         margin: 0px 10px 10px 10px !important;
         transition: border 0.3s ease !important;
-        border: 2px solid rgba(130,130,130,0.8) !important;
+        border: 2px solid rgba(130, 130, 130, 0.8) !important;
         box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.5);
     }
 
     .browserContainer>findbar:hover {
-        border: 2px solid rgba(214,214,214,0.8) !important;
+        border: 2px solid rgba(214, 214, 214, 0.8) !important;
         box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.5);
     }
 }
@@ -1374,3 +1400,5 @@ moz-urlbar#urlbar[breakout][breakout-extend]:popover-open .urlbar-background {
 #splitView-image {
     fill: none;
 }
+
+/*}*/
