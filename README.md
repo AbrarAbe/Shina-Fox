@@ -106,6 +106,8 @@ intended result.
 <active-profile>/
 └── chrome/
     ├── userChrome.css
+    prefs.js
+    userjs
 ```
 
 The exact stylesheet name is `userChrome.css`, not `chrome.css` or
