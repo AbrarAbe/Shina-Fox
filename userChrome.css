@@ -40,6 +40,12 @@
         background-color: transparent !important;
     }
 
+    #tabbrowser-tabs tab-split-view-wrapper {
+        &[hasactivetab] {
+            background-color: transparent !important;
+        }
+    }
+
     #browser,
     #navigator-toolbox {
         background-color: var(--toolbox-background-color, #282927) !important;
@@ -75,6 +81,12 @@
         background-color: transparent !important;
     }
 
+    #tabbrowser-tabs tab-split-view-wrapper {
+        &[hasactivetab] {
+            background-color: transparent !important;
+        }
+    }
+
     #browser,
     #navigator-toolbox {
         background-color: var(--toolbox-background-color, #636363) !important;
@@ -86,6 +98,12 @@
 
     .browserContainer>findbar {
         background-color: var(--toolbox-background-color, #636363) !important;
+    }
+}
+
+#tabbrowser-tabs tab-split-view-wrapper {
+    &[hasactivetab] {
+        background-color: transparent !important;
     }
 }
 
